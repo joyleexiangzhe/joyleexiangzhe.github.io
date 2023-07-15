@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Algorithm day2 | Joy LEE&#39;s Blog</title>
+  <title>Algorithm-day3 | Joy LEE&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="数组Part02：977.有序数组的平方  209.长度最小的子数组 59.螺旋矩阵977、 给定一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。 209、 给定一个含有 n 个正整数的数组和一个正整数 target 。找出该数组中满足其和 ≥ target 的长度最小的连续子数组 ，并返回其长度。如果不存在符合条件的子数组，返回 0">
+  <meta name="description" content="链表Part01：203.移除链表元素  707.设计链表 206.反转链表203、 给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val &#x3D;&#x3D; val 的节点，并返回 新的头节点 。 707、实现 MyLinkedList 类： int get(int index) void addAtHead(int val) void addAtTail(int">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Algorithm day2">
-<meta property="og:url" content="http://example.com/2023/07/14/Algorithm-day2/index.html">
+<meta property="og:title" content="Algorithm-day3">
+<meta property="og:url" content="http://example.com/2023/07/15/Algorithm-day3/index.html">
 <meta property="og:site_name" content="Joy LEE&#39;s Blog">
-<meta property="og:description" content="数组Part02：977.有序数组的平方  209.长度最小的子数组 59.螺旋矩阵977、 给定一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。 209、 给定一个含有 n 个正整数的数组和一个正整数 target 。找出该数组中满足其和 ≥ target 的长度最小的连续子数组 ，并返回其长度。如果不存在符合条件的子数组，返回 0">
+<meta property="og:description" content="链表Part01：203.移除链表元素  707.设计链表 206.反转链表203、 给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val &#x3D;&#x3D; val 的节点，并返回 新的头节点 。 707、实现 MyLinkedList 类： int get(int index) void addAtHead(int val) void addAtTail(int">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-07-14T09:12:17.000Z">
-<meta property="article:modified_time" content="2023-07-14T09:14:38.774Z">
+<meta property="article:published_time" content="2023-07-15T14:26:41.000Z">
+<meta property="article:modified_time" content="2023-07-15T14:28:36.217Z">
 <meta property="article:author" content="Joy LEE">
 <meta property="article:tag" content="算法打卡">
 <meta property="article:tag" content="Java">
@@ -229,14 +229,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Algorithm-day2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Algorithm-day3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Algorithm day2
+      Algorithm-day3
     </h1>
   
 
@@ -248,8 +248,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2023/07/14/Algorithm-day2/" class="archive-article-date">
-        <time datetime="2023-07-14T09:12:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-14</time>
+<a href="/2023/07/15/Algorithm-day3/" class="archive-article-date">
+        <time datetime="2023-07-15T14:26:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-15</time>
 </a>
 
   
@@ -262,7 +262,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">598字</span>
+      <span class="post-count">729字</span>
     </span>
   </span>
 
@@ -271,7 +271,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -283,68 +283,89 @@
   <div class="article-entry" itemprop="articleBody">
     
     <blockquote>
-<h4 id="数组Part02：977-有序数组的平方-209-长度最小的子数组-59-螺旋矩阵"><a href="#数组Part02：977-有序数组的平方-209-长度最小的子数组-59-螺旋矩阵" class="headerlink" title="数组Part02：977.有序数组的平方  209.长度最小的子数组 59.螺旋矩阵"></a>数组Part02：977.有序数组的平方  209.长度最小的子数组 59.螺旋矩阵</h4><p>977、 给定一个按 <strong>非递减顺序</strong> 排序的整数数组 <code>nums</code>，返回 <strong>每个数字的平方</strong> 组成的新数组，要求也按 <strong>非递减顺序</strong> 排序。</p>
-<p>209、 给定一个含有 n 个正整数的数组和一个正整数 target 。找出该数组中满足其和 ≥ target 的长度最小的连续子数组 ，并返回其长度。如果不存在符合条件的子数组，返回 0 。</p>
+<h4 id="链表Part01：203-移除链表元素-707-设计链表-206-反转链表"><a href="#链表Part01：203-移除链表元素-707-设计链表-206-反转链表" class="headerlink" title="链表Part01：203.移除链表元素  707.设计链表 206.反转链表"></a>链表Part01：203.移除链表元素  707.设计链表 206.反转链表</h4><p>203、 给你一个链表的头节点 <code>head</code> 和一个整数 <code>val</code> ，请你删除链表中所有满足 <code>Node.val == val</code> 的节点，并返回 <strong>新的头节点</strong> 。</p>
+<p>707、实现 <code>MyLinkedList</code> 类：</p>
+<p><code>int get(int index)</code></p>
+<p><code>void addAtHead(int val)</code></p>
+<p><code>void addAtTail(int val)</code></p>
+<p><code>void addAtIndex(int index, int val)</code></p>
+<p><code>void deleteAtIndex(int index)</code></p>
+<p>206、给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
 </blockquote>
-<h4 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h4><blockquote>
-<p>leetcode977. 有序数组的平方</p>
-<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/squares-of-a-sorted-array/">https://leetcode.cn/problems/squares-of-a-sorted-array/</a></p>
-</blockquote>
-<ul>
-<li><strong>思路</strong>：<ol>
-<li>暴力计算平方后的newnum，然后<code> Array.sort(newnum)</code>进行排序</li>
-<li>最大值肯定出现在数组两端—&gt;考虑双指针</li>
-</ol>
-</li>
-<li><strong>代码</strong>：</li>
+<h4 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h4><h5 id="前言：链表的初始化"><a href="#前言：链表的初始化" class="headerlink" title="前言：链表的初始化"></a>前言：链表的初始化</h5><ul>
+<li>单向链表</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span>[] sortedSquares(<span class="type">int</span>[] nums)&#123;</span><br><span class="line">        <span class="type">int</span>[] ans = <span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">pos</span> <span class="operator">=</span> nums.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>,j= nums.length-<span class="number">1</span>;i&lt;=j;)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]*nums[i]&gt;nums[j]*nums[j])&#123;</span><br><span class="line">                ans[pos] = nums[i]*nums[i];</span><br><span class="line">                ++i;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                ans[pos] = nums[j]*nums[j];</span><br><span class="line">                --j;</span><br><span class="line">            &#125;</span><br><span class="line">            --pos;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>节点的定义类</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">listNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    listNode next;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">listNode</span><span class="params">()</span>&#123; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">listNode</span><span class="params">(<span class="type">int</span> val)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.val = val;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">listNode</span><span class="params">(<span class="type">int</span> val, listNode next)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.val = val;</span><br><span class="line">        <span class="built_in">this</span>.next = next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>单链表初始化及链表操作类</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyLinkedList</span>&#123;</span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line">    <span class="comment">//虚拟头节点</span></span><br><span class="line">    listNode head;</span><br><span class="line">    <span class="comment">//构造函数</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyLinkedList</span><span class="params">()</span>&#123;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">        head = <span class="keyword">new</span> <span class="title class_">listNode</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>时间复杂度：O(n)</li>
-<li>空间复杂度：O(n)</li>
+<li>双向链表</li>
 </ul>
+<ol>
+<li>节点的定义类</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">listNode2</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    listNode2 next, pre;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">listNode2</span><span class="params">()</span>&#123; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">listNode2</span><span class="params">(<span class="type">int</span> val)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.val = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>双链表初始化及链表操作类</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyLinkedList2</span> &#123;</span><br><span class="line">    <span class="type">int</span> size;</span><br><span class="line">    <span class="comment">//虚拟头节点</span></span><br><span class="line">    listNode2 head, tail;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//构造函数</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyLinkedList2</span><span class="params">()</span> &#123;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">        head = <span class="keyword">new</span> <span class="title class_">listNode2</span>(<span class="number">0</span>);</span><br><span class="line">        tail = <span class="keyword">new</span> <span class="title class_">listNode2</span>(<span class="number">0</span>);</span><br><span class="line">        head.next = tail;</span><br><span class="line">        tail.pre = head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
-<p>leetcode209. 长度最小的子数组</p>
-<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-size-subarray-sum/">https://leetcode.cn/problems/minimum-size-subarray-sum/</a></p>
+<p>leetcode203. 移除链表元素</p>
+<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-linked-list-elements/">https://leetcode.cn/problems/remove-linked-list-elements/</a></p>
 </blockquote>
 <ul>
-<li><p><strong>思路</strong>：</p>
-<ol>
-<li>两层for循环，遍历以i开头的所有连续数组，达到target时退出该层循环</li>
-<li>连续、区间长度变化—&gt;<strong>滑动窗口</strong></li>
-</ol>
+<li><p><strong>关键点</strong>：</p>
+<p>注意头节点的处理（单独处理或设置虚拟头节点统一处理）</p>
 </li>
 <li><p><strong>代码</strong>：</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minArray</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> target)</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> Integer.MAX_VALUE;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">l</span> <span class="operator">=</span> <span class="number">0</span>, r = <span class="number">0</span>; r &lt; nums.length; r++)&#123;</span><br><span class="line">            sum += nums[r];</span><br><span class="line">            <span class="keyword">while</span>(sum &gt;=target)&#123; <span class="comment">//子序列长度超出target</span></span><br><span class="line">                res = Math.min(res, r - l + <span class="number">1</span>);</span><br><span class="line">                sum -= nums[l++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res == Integer.MAX_VALUE ? <span class="number">0</span> : res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> listNode <span class="title function_">Removelistnode</span><span class="params">(listNode head, <span class="type">int</span> val)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 因为删除可能涉及到头节点，所以设置dummy节点，统一操作</span></span><br><span class="line">        <span class="type">listNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">listNode</span>(-<span class="number">1</span>, head);</span><br><span class="line">        <span class="type">listNode</span> <span class="variable">pre</span> <span class="operator">=</span> dummy;</span><br><span class="line">        <span class="type">listNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="keyword">while</span>(cur != <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cur.val == val)&#123;</span><br><span class="line">                pre.next = cur.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                pre  = cur;</span><br><span class="line">            &#125;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>时间复杂度：O(n)</li>
 <li>空间复杂度：O(1)</li>
 </ul>
 <blockquote>
-<p>leetcode59. 螺旋矩阵</p>
-<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix-ii/">https://leetcode.cn/problems/spiral-matrix-ii/</a></p>
+<p>leetcode707.设计链表</p>
+<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/design-linked-list/">https://leetcode.cn/problems/design-linked-list/</a></p>
 </blockquote>
 <ul>
-<li><p><strong>思路</strong>：</p>
-<p>定义循环不变量与变量，进行模拟</p>
-</li>
 <li><p><strong>关键点</strong>：</p>
 <ol>
-<li>循环不变量：模拟每个边的路线，均采用左开右闭</li>
-<li>循环变量：每轮的起点横纵坐标+1</li>
+<li>单链表和双链表的区别</li>
+<li>注意增加元素后，链表长度<code>size</code>的变化</li>
 </ol>
 </li>
 <li><p><strong>代码</strong>：</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span>[][] generateMatrix(<span class="type">int</span> n)&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">round</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span>[][] res = <span class="keyword">new</span> <span class="title class_">int</span>[n][n];</span><br><span class="line">        <span class="type">int</span> i, j;</span><br><span class="line">        <span class="keyword">while</span>(round++ &lt; n / <span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j = start; j &lt; n - start - <span class="number">1</span>; j++)&#123;</span><br><span class="line">                res[start][j] = num++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(i = start; i &lt; n - start - <span class="number">1</span>; i++)&#123;</span><br><span class="line">                res[i][j] = num++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(; j &gt; start; j--)&#123;</span><br><span class="line">                res[i][j] = num++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(; i &gt; start; i--)&#123;</span><br><span class="line">                res[i][j] = num++;</span><br><span class="line">            &#125;</span><br><span class="line">            start ++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">1</span>)&#123;</span><br><span class="line">            res[start][start] = num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//获取某节点处的元素</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index &lt; <span class="number">0</span> || index &gt;= size) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    <span class="type">listNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= index; i++)&#123;</span><br><span class="line">        cur = cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cur.val;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//在某节点处插入元素</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtIndex</span><span class="params">(<span class="type">int</span> index, <span class="type">int</span> val)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index &gt; size) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(index &lt; <span class="number">0</span>) index = <span class="number">0</span>;</span><br><span class="line">    size++;</span><br><span class="line">    <span class="type">listNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++)&#123;</span><br><span class="line">        pred = pred.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">listNode</span> <span class="variable">toAdd</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">listNode</span>(val);</span><br><span class="line">    toAdd.next = pred.next;</span><br><span class="line">    pred.next = toAdd;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtHead</span><span class="params">(<span class="type">int</span> val)</span>&#123;</span><br><span class="line">    addAtIndex(<span class="number">0</span>, val);</span><br><span class="line">&#125;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addAtTail</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">   addAtIndex(size, val);</span><br><span class="line">&#125;</span><br><span class="line">  <span class="comment">//删除某节点元素</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteAtIndex</span><span class="params">(<span class="type">int</span> index, <span class="type">int</span> val)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index &gt;= size || index &lt; <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">    size--;</span><br><span class="line">    <span class="type">listNode</span> <span class="variable">pred</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; index; i++)&#123;</span><br><span class="line">        pred = pred.next;</span><br><span class="line">    &#125;</span><br><span class="line">  pred.next = pred.next.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>leetcode206. 反转链表</p>
+<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">https://leetcode.cn/problems/reverse-linked-list/</a></p>
+</blockquote>
+<ul>
+<li><p><strong>思路</strong>：</p>
+<p>将链表的每个指针反转，返回最后一个节点</p>
+</li>
+<li><p><strong>代码</strong>：</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> listNode <span class="title function_">reverseList</span><span class="params">(listNode head)</span>&#123;</span><br><span class="line">        <span class="type">listNode</span> <span class="variable">pre</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">listNode</span> <span class="variable">cur</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">listNode</span> <span class="variable">tmp</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">while</span>(cur != <span class="literal">null</span>)&#123;</span><br><span class="line">            tmp = cur.next;</span><br><span class="line">            cur.next = pre;</span><br><span class="line">            pre = cur;</span><br><span class="line">            cur = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pre;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>时间复杂度：O(n<sup>2</sup>)</li>
+<li>时间复杂度：O(n)</li>
 <li>空间复杂度：O(1)</li>
 </ul>
 
@@ -361,7 +382,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://example.com/2023/07/14/Algorithm-day2/" title="Algorithm day2" target="_blank">http://example.com/2023/07/14/Algorithm-day2/</a>
+          <a href="http://example.com/2023/07/15/Algorithm-day3/" title="Algorithm-day3" target="_blank">http://example.com/2023/07/15/Algorithm-day3/</a>
         </li>
         
         <li>
@@ -443,7 +464,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/07/14/Algorithm-day2/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/07/15/Algorithm-day3/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -458,18 +479,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2023/07/15/Algorithm-day3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Algorithm-day3
-        
-      </div>
-    </a>
   
-  
-    <a href="/2023/07/10/Algorithm-day1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Algorithm day1</div>
+    <a href="/2023/07/14/Algorithm-day2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Algorithm day2</div>
       <i class="icon-circle-right"></i>
     </a>
   
