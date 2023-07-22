@@ -6,16 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 算法打卡 | Joy LEE&#39;s Blog</title>
+  <title>Algorithm-day4 | Joy LEE&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Joy LEE&#39;s Blog">
-<meta property="og:url" content="http://example.com/tags/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1/index.html">
+  <meta name="description" content="链表Part02：24.两两交换链表中的节点 19.删除链表的倒数第N个节点 160.链表相交 142.环形链表24、 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。 19、给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。 160、给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algorithm-day4">
+<meta property="og:url" content="http://example.com/2023/07/23/Algorithm-day4/index.html">
 <meta property="og:site_name" content="Joy LEE&#39;s Blog">
+<meta property="og:description" content="链表Part02：24.两两交换链表中的节点 19.删除链表的倒数第N个节点 160.链表相交 142.环形链表24、 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。 19、给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。 160、给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-07-22T18:24:30.000Z">
+<meta property="article:modified_time" content="2023-07-22T18:26:36.846Z">
 <meta property="article:author" content="Joy LEE">
+<meta property="article:tag" content="算法打卡">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Joy LEE&#39;s Blog" type="application/atom+xml">
@@ -223,41 +229,200 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Algorithm-day4" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      Algorithm-day4
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2023/07/23/Algorithm-day4/" class="archive-article-date">
         <time datetime="2023-07-22T18:24:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-23</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/07/23/Algorithm-day4/" target="_blank">Algorithm-day4</a>
   
-    </h1>
-  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">4分</span>
+    </span>
+  </span>
+</div>
 
 
-        <div class="article-info info-on-right">
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<h4 id="链表Part02：24-两两交换链表中的节点-19-删除链表的倒数第N个节点-160-链表相交-142-环形链表"><a href="#链表Part02：24-两两交换链表中的节点-19-删除链表的倒数第N个节点-160-链表相交-142-环形链表" class="headerlink" title="链表Part02：24.两两交换链表中的节点 19.删除链表的倒数第N个节点 160.链表相交 142.环形链表"></a>链表Part02：24.两两交换链表中的节点 19.删除链表的倒数第N个节点 160.链表相交 142.环形链表</h4><p>24、 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。</p>
+<p>19、给你一个链表，删除链表的倒数第 <code>n</code> 个结点，并且返回链表的头结点。</p>
+<p>160、给你两个单链表的头节点 <code>headA</code> 和 <code>headB</code> ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 <code>null</code></p>
+<p>142、给定一个链表的头节点  <code>head</code> ，返回链表开始入环的第一个节点。 <em>如果链表无环，则返回 <code>null</code>。</em></p>
+</blockquote>
+<h4 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h4><blockquote>
+<p>leetcode24. 两两交换链表中的节点</p>
+<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-nodes-in-pairs/">https://leetcode.cn/problems/swap-nodes-in-pairs/</a></p>
+</blockquote>
+<ul>
+<li><p><strong>关键点</strong>：</p>
+<p>注意是两两交换，不是类似冒泡</p>
+</li>
+<li><p><strong>思路</strong>：</p>
+</li>
+</ul>
+<ol>
+<li><p>迭代（画图模拟交换后链的变化）</p>
+<p>&#x3D;&#x3D;采用虚拟头节点更方便&#x3D;&#x3D;</p>
+<p>! <a href="/images/24.jpg" title="leetcode24">图片</a></p>
+</li>
+<li><p>递归</p>
+<ul>
+<li>变化参数：下一对中的头节点</li>
+<li>变化返回值：交换后新的头节点</li>
+<li>退出递归条件：头节点为空（偶数列）或头节点下一个节点为空（奇数列）</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>代码（迭代）</strong>：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> listNode <span class="title function_">swapPair2</span><span class="params">(listNode head)</span>&#123;</span><br><span class="line">        <span class="type">listNode</span> <span class="variable">dummyhead</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">listNode</span>(-<span class="number">1</span>);</span><br><span class="line">        dummyhead.next = head;</span><br><span class="line">        <span class="type">listNode</span> <span class="variable">cur</span> <span class="operator">=</span> dummyhead;</span><br><span class="line">        listNode firstnode;</span><br><span class="line">        listNode secondnode;</span><br><span class="line">        listNode tmp;</span><br><span class="line">        <span class="keyword">while</span>(cur.next != <span class="literal">null</span> &amp;&amp; cur.next.next != <span class="literal">null</span>)&#123;</span><br><span class="line">            tmp = cur.next.next.next;</span><br><span class="line">            firstnode = cur.next;</span><br><span class="line">            secondnode = cur.next.next;</span><br><span class="line">            cur.next = secondnode;</span><br><span class="line">            secondnode.next = firstnode;</span><br><span class="line">            firstnode.next = tmp;</span><br><span class="line">            cur = firstnode;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummyhead.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度：O(n)</li>
+<li>空间复杂度：O(1)</li>
+<li><strong>代码（递归）</strong>：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> listNode <span class="title function_">swapPair</span><span class="params">(listNode head)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="type">listNode</span> <span class="variable">next</span> <span class="operator">=</span> head.next;</span><br><span class="line">        <span class="type">listNode</span> <span class="variable">newhead</span> <span class="operator">=</span> swapPair(next.next);</span><br><span class="line">        next.next = head;</span><br><span class="line">        head.next = newhead;</span><br><span class="line">        <span class="keyword">return</span> next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度：O(n)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<blockquote>
+<p>leetcode19.删除链表的倒数第N个节点</p>
+<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">https://leetcode.cn/problems/remove-nth-node-from-end-of-list/</a></p>
+</blockquote>
+<ul>
+<li><strong>思路</strong><ol>
+<li>计算链表长度length，length - n + 1得到要删除的节点</li>
+<li><strong>双指针</strong><ul>
+<li>快指针：一直向前遍历链表到空指针</li>
+<li>慢指针：快指针走到n时开始遍历，快指针到结尾时慢指针刚好到要删除节点</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>代码（双指针）</strong>：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">public</span> listNode <span class="title function_">deleteEnd</span><span class="params">(listNode head, <span class="type">int</span> n)</span>&#123;</span><br><span class="line">     <span class="type">listNode</span> <span class="variable">dummyhead</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">listNode</span>();</span><br><span class="line">     dummyhead.next = head;</span><br><span class="line">     <span class="type">listNode</span> <span class="variable">slowindex</span> <span class="operator">=</span> dummyhead;</span><br><span class="line">     <span class="type">listNode</span> <span class="variable">fastindex</span> <span class="operator">=</span> dummyhead;</span><br><span class="line">     <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">         fastindex = fastindex.next;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">while</span>(fastindex.next != <span class="literal">null</span>)&#123;</span><br><span class="line">         fastindex = fastindex.next;</span><br><span class="line">         slowindex = slowindex.next;</span><br><span class="line">     &#125;</span><br><span class="line">     slowindex.next = slowindex.next.next;</span><br><span class="line">     <span class="keyword">return</span> dummyhead.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度：O(n)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<blockquote>
+<p>leetcode160. 链表相交</p>
+<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/">https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/</a></p>
+</blockquote>
+<ul>
+<li><p><strong>思路</strong>：</p>
+<p>末尾对齐，从对齐处开始比较节点是否相等，如图所示。</p>
+</li>
+<li><p><strong>代码</strong>：</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> listNode <span class="title function_">getIntersection</span><span class="params">(listNode head1, listNode head2)</span>&#123;</span><br><span class="line">       <span class="type">listNode</span> <span class="variable">cur1</span> <span class="operator">=</span> head1;</span><br><span class="line">       <span class="type">listNode</span> <span class="variable">cur2</span> <span class="operator">=</span> head2;</span><br><span class="line">       <span class="type">int</span> <span class="variable">len1</span> <span class="operator">=</span> <span class="number">0</span>, len2 = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">while</span>(cur1 != <span class="literal">null</span>)&#123;</span><br><span class="line">           len1++;</span><br><span class="line">           cur1 = cur1.next;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">while</span>(cur2 != <span class="literal">null</span>)&#123;</span><br><span class="line">           len2++;</span><br><span class="line">           cur2 = cur2.next;</span><br><span class="line">       &#125;</span><br><span class="line">       cur1 = head1;</span><br><span class="line">       cur2 = head2;</span><br><span class="line">       <span class="comment">//规定cur1为最长链表的头，len1为最长链表长度</span></span><br><span class="line">       <span class="keyword">if</span>(len2 &gt; len1)&#123;</span><br><span class="line">           <span class="type">int</span> <span class="variable">tmpLen</span> <span class="operator">=</span> len1;</span><br><span class="line">           len1 = len2;</span><br><span class="line">           len2 = tmpLen;</span><br><span class="line">           <span class="comment">//2. swap (curA, curB);</span></span><br><span class="line">           <span class="type">listNode</span> <span class="variable">tmpNode</span> <span class="operator">=</span> cur1;</span><br><span class="line">           cur1 = cur2;</span><br><span class="line">           cur2 = tmpNode;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="type">int</span> <span class="variable">gap</span> <span class="operator">=</span> len1 - len2;</span><br><span class="line">       <span class="keyword">while</span>(gap-- &gt; <span class="number">0</span>)&#123;</span><br><span class="line">           cur1 = cur1.next;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">while</span>(cur1 != <span class="literal">null</span>)&#123;</span><br><span class="line">           <span class="keyword">if</span>(cur1 == cur2)&#123;</span><br><span class="line">               <span class="keyword">return</span> cur1;</span><br><span class="line">           &#125;</span><br><span class="line">           cur1 = cur1.next;</span><br><span class="line">           cur2 = cur2.next;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度：O(n+m)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<blockquote>
+<p>leetcode142.环形链表</p>
+<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/">https://leetcode.cn/problems/linked-list-cycle-ii/</a></p>
+</blockquote>
+<ul>
+<li><p><strong>思路</strong></p>
+<p>快慢指针法：</p>
+<ul>
+<li>fast：每次移动两个节点</li>
+<li>slow：每次移动一个节点</li>
+</ul>
+<p>x、y、z如图所示，得到等式关系：<code>(x + y) * 2 = x + y + n (y + z)</code>（相遇时slow走过的节点数*2 &#x3D;&#x3D; fast走过的节点数）</p>
+<p>! <a href="/images/142.jpg" title="leetcode142">图片</a></p>
+<p>⚠️：slow入环的第一圈一定会与fast相遇（原因：假设slow第一次到环入口时fast距环入口节点数为k，那么它再走完完整的一圈回到环入口时，需要走<code>k + y + z</code>个节点，slow需要走<code>(k + y + z) / 2</code>个节点，很明显<code>(k + y + z) / 2 &lt; y + z</code>，所以此时slow还没有走完一圈，必然会和fast再第一圈内相遇。</p>
+<p>化简以上公式得到：<code>x = (n - 1)(y + z) + z</code>，也就是说，从相遇点开始，两指针从头节点和相遇点以相同速度同时出发，必然会在环入口处相遇。</p>
+</li>
+<li><p><strong>代码</strong>：</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> listNode <span class="title function_">circleList</span><span class="params">(listNode head)</span>&#123;</span><br><span class="line">    <span class="type">listNode</span> <span class="variable">slowindex</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="type">listNode</span> <span class="variable">fastindex</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="keyword">while</span>(fastindex != <span class="literal">null</span> &amp;&amp; fastindex.next !=<span class="literal">null</span>)&#123;</span><br><span class="line">        slowindex = slowindex.next;</span><br><span class="line">        fastindex = fastindex.next.next;</span><br><span class="line">        <span class="keyword">if</span>(slowindex == fastindex)&#123;</span><br><span class="line">            <span class="type">listNode</span> <span class="variable">index1</span> <span class="operator">=</span> fastindex;</span><br><span class="line">            <span class="type">listNode</span> <span class="variable">index2</span> <span class="operator">=</span> head;</span><br><span class="line">            <span class="keyword">while</span>(index1 != index2)&#123;</span><br><span class="line">                index1 = index1.next;</span><br><span class="line">                index2 = index2.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> index1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度：O(n)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Joy LEE
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2023/07/23/Algorithm-day4/" title="Algorithm-day4" target="_blank">http://example.com/2023/07/23/Algorithm-day4/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -273,160 +438,107 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/07/23/Algorithm-day4/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/07/15/Algorithm-day3/" class="archive-article-date">
-        <time datetime="2023-07-15T14:26:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-15</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/07/15/Algorithm-day3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Algorithm-day3</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/07/15/Algorithm-day3/" target="_blank">Algorithm-day3</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/07/14/Algorithm-day2/" class="archive-article-date">
-        <time datetime="2023-07-14T09:12:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-14</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/07/14/Algorithm-day2/" target="_blank">Algorithm day2</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/07/10/Algorithm-day1/" class="archive-article-date">
-        <time datetime="2023-07-09T16:46:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/07/10/Algorithm-day1/" target="_blank">Algorithm day1</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
 
 
           </div>
@@ -467,9 +579,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
