@@ -17,12 +17,15 @@
 <meta property="og:site_name" content="Joy LEE&#39;s Blog">
 <meta property="og:description" content="链表Part02：24.两两交换链表中的节点 19.删除链表的倒数第N个节点 160.链表相交 142.环形链表24、 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。 19、给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。 160、给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/imges/24.jpg">
+<meta property="og:image" content="http://example.com/imges/142.jpg">
 <meta property="article:published_time" content="2023-07-22T18:24:30.000Z">
-<meta property="article:modified_time" content="2023-07-22T18:26:36.846Z">
+<meta property="article:modified_time" content="2023-07-23T06:15:51.475Z">
 <meta property="article:author" content="Joy LEE">
 <meta property="article:tag" content="算法打卡">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/imges/24.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Joy LEE&#39;s Blog" type="application/atom+xml">
   
@@ -302,7 +305,7 @@
 <ol>
 <li><p>迭代（画图模拟交换后链的变化）</p>
 <p>&#x3D;&#x3D;采用虚拟头节点更方便&#x3D;&#x3D;</p>
-<p>! <a href="/images/24.jpg" title="leetcode24">图片</a></p>
+<p><img src="/imges/24.jpg"></p>
 </li>
 <li><p>递归</p>
 <ul>
@@ -379,7 +382,7 @@
 <li>slow：每次移动一个节点</li>
 </ul>
 <p>x、y、z如图所示，得到等式关系：<code>(x + y) * 2 = x + y + n (y + z)</code>（相遇时slow走过的节点数*2 &#x3D;&#x3D; fast走过的节点数）</p>
-<p>! <a href="/images/142.jpg" title="leetcode142">图片</a></p>
+<p><img src="/imges/142.jpg"></p>
 <p>⚠️：slow入环的第一圈一定会与fast相遇（原因：假设slow第一次到环入口时fast距环入口节点数为k，那么它再走完完整的一圈回到环入口时，需要走<code>k + y + z</code>个节点，slow需要走<code>(k + y + z) / 2</code>个节点，很明显<code>(k + y + z) / 2 &lt; y + z</code>，所以此时slow还没有走完一圈，必然会和fast再第一圈内相遇。</p>
 <p>化简以上公式得到：<code>x = (n - 1)(y + z) + z</code>，也就是说，从相遇点开始，两指针从头节点和相遇点以相同速度同时出发，必然会在环入口处相遇。</p>
 </li>
