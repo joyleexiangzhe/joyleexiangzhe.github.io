@@ -6,21 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Joy LEE&#39;s Blog</title>
+  <title>Algorithm-day8 | Joy LEE&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Joy LEE&#39;s Blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="字符串Part02：28.实现strStr() 459.重复的子字符串28、 给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串的第一个匹配项的下标（下标从 0 开始）。如果 needle 不是 haystack 的一部分，则返回 -1 。 459、给定一个非空的字符串 s ，检查是否可以通过由它的一个子串重复多次构成。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algorithm-day8">
+<meta property="og:url" content="http://example.com/2023/08/01/Algorithm-day8/index.html">
 <meta property="og:site_name" content="Joy LEE&#39;s Blog">
+<meta property="og:description" content="字符串Part02：28.实现strStr() 459.重复的子字符串28、 给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串的第一个匹配项的下标（下标从 0 开始）。如果 needle 不是 haystack 的一部分，则返回 -1 。 459、给定一个非空的字符串 s ，检查是否可以通过由它的一个子串重复多次构成。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/08/01/Algorithm-day8/kmp.jpg">
+<meta property="article:published_time" content="2023-08-01T02:58:56.000Z">
+<meta property="article:modified_time" content="2023-08-02T16:28:55.926Z">
 <meta property="article:author" content="Joy LEE">
+<meta property="article:tag" content="算法打卡">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/08/01/Algorithm-day8/kmp.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Joy LEE&#39;s Blog" type="application/atom+xml">
   
@@ -227,25 +231,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-Algorithm-day8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Algorithm-day8" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/08/01/Algorithm-day8/" target="_blank">Algorithm-day8</a>
-  
+    <h1 class="article-title" itemprop="name">
+      Algorithm-day8
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2023/08/01/Algorithm-day8/" class="archive-article-date">
         <time datetime="2023-08-01T02:58:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-01</time>
 </a>
@@ -253,6 +257,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">760字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -263,210 +288,74 @@
 <h4 id="字符串Part02：28-实现strStr-459-重复的子字符串"><a href="#字符串Part02：28-实现strStr-459-重复的子字符串" class="headerlink" title="字符串Part02：28.实现strStr() 459.重复的子字符串"></a>字符串Part02：28.实现strStr() 459.重复的子字符串</h4><p>28、 给你两个字符串 <code>haystack</code> 和 <code>needle</code> ，请你在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串的第一个匹配项的下标（下标从 0 开始）。如果 <code>needle</code> 不是 <code>haystack</code> 的一部分，则返回 <code>-1</code> 。</p>
 <p>459、给定一个非空的字符串 <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。 </p>
 </blockquote>
-<h4 id><a href="#" class="headerlink" title></a></h4>
-    
-    <a class="article-more-a" href="/2023/08/01/Algorithm-day8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/08/01/Algorithm-day8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Algotithm-day7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/08/01/Algotithm-day7/" target="_blank">Algotithm-day7</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/08/01/Algotithm-day7/" class="archive-article-date">
-        <time datetime="2023-08-01T02:51:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<h4 id="字符串Part01：344-反转字符串-541-反转字符串II-剑指05-替换空格-151-翻转字符串里的单词"><a href="#字符串Part01：344-反转字符串-541-反转字符串II-剑指05-替换空格-151-翻转字符串里的单词" class="headerlink" title="字符串Part01：344.反转字符串 541.反转字符串II 剑指05.替换空格 151.翻转字符串里的单词"></a>字符串Part01：344.反转字符串 541.反转字符串II 剑指05.替换空格 151.翻转字符串里的单词</h4><p>344、 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 <code>s</code> 的形式给出。</p>
-<p>541、给定一个字符串 <code>s</code> 和一个整数 <code>k</code>，从字符串开头算起，每计数至 <code>2k</code> 个字符，就反转这 <code>2k</code> 字符中的前 <code>k</code> 个字符。</p>
-<p>15、给你一个整数数组 nums ，判断是否存在三元组 [nums[i], nums[j], nums[k]] 满足 i !&#x3D; j、i !&#x3D; k 且 j !&#x3D; k ，同时还满足 nums[i] + nums[j] + nums[k] &#x3D;&#x3D; 0 。请返回所有和为 0 且不重复的三元组。</p>
-<p>18、给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] </p>
+<h4 id><a href="#" class="headerlink" title></a><span id="more"></span></h4><blockquote>
+<p>leetcode28. 找出字符串中第一个匹配项的下标</p>
+<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/">https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/</a></p>
 </blockquote>
-<h4 id><a href="#" class="headerlink" title></a></h4>
-    
-    <a class="article-more-a" href="/2023/08/01/Algotithm-day7/#more">more >></a>
-    
-    
+<h4 id="前言：KMP算法详解"><a href="#前言：KMP算法详解" class="headerlink" title="前言：KMP算法详解"></a>前言：KMP算法详解</h4><p><strong>算法整体流程：</strong></p>
+<p><code>step 1</code>：&#x3D;&#x3D;求next数组&#x3D;&#x3D;</p>
+<p>1）初始化</p>
+<p>定义变量<code>i</code>：用于对next数组进行遍历求解的下标，即当前后缀的末尾下标</p>
+<p>定义变量<code>j</code>：用于根据next值跳转到已匹配处，即当前前缀的末尾下标</p>
+<p>⚠️：前缀和后缀的从首到尾都是从左到右看</p>
+<p>2）处理当前元素不相同的情况</p>
+<p>不相同时，j要跳转到已匹配处为i寻找能匹配的值，即通过已经计算的next数组进行回溯（不一定只跳转一次，直到跳转处的下一位与i匹配）</p>
+<p>3）处理当前元素相同的情况</p>
+<p>相同时只需将j后移一位，next数组也+1（j前为已匹配好的，只需将当前新匹配的也加进来）i后移继续遍历</p>
+<p>⚠️：以下代码的书写方式要先处理不相同的情况，否则相同时j++后在while中再用j+1比较多加了一次1，逻辑上是错误的。</p>
+<p><code>step 2</code>：根据next数组进行原串与模式串的匹配</p>
+<ul>
+<li><strong>本题代码（即kmp算法流程，代码为next统一减1的方式）</strong>：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getNext</span><span class="params">(<span class="type">int</span>[] next, String s)</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        next[<span class="number">0</span>] = j;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">while</span>(j &gt;= <span class="number">0</span> &amp;&amp; s.charAt(i) != s.charAt(j+<span class="number">1</span>))&#123;</span><br><span class="line">                j = next[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i) == s.charAt(j+<span class="number">1</span>)) j++;</span><br><span class="line">            next[i] = j;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">strStr</span><span class="params">(String haystack, String needle)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(needle.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] next = <span class="keyword">new</span> <span class="title class_">int</span>[needle.length()];</span><br><span class="line">        getNext(next, needle);</span><br><span class="line">        <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; haystack.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">while</span>(j &gt;= <span class="number">0</span> &amp;&amp; haystack.charAt(i) != needle.charAt(j+<span class="number">1</span>))&#123;</span><br><span class="line">                j = next[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(haystack.charAt(i) == needle.charAt(j+<span class="number">1</span>)) j++;</span><br><span class="line">            <span class="keyword">if</span>(j == needle.length() - <span class="number">1</span>) <span class="keyword">return</span> (i - needle.length() + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/08/01/Algotithm-day7/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Algorithm-day6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/07/24/Algorithm-day6/" target="_blank">Algorithm-day6</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/07/24/Algorithm-day6/" class="archive-article-date">
-        <time datetime="2023-07-24T08:35:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-24</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<h4 id="哈希表Part02：454-四数相加-383-赎金信-15-三数之和-18-四数之和"><a href="#哈希表Part02：454-四数相加-383-赎金信-15-三数之和-18-四数之和" class="headerlink" title="哈希表Part02：454.四数相加 383.赎金信 15.三数之和 18.四数之和"></a>哈希表Part02：454.四数相加 383.赎金信 15.三数之和 18.四数之和</h4><p>454、 给你四个整数数组 nums1、nums2、nums3 和 nums4 ，数组长度都是 n ，请你计算有多少个元组 (i, j, k, l) 满足：<br>nums1[i] + nums2[j] + nums3[k] + nums4[l] &#x3D;&#x3D; 0</p>
-<p>383、给你两个字符串：ransomNote 和 magazine ，判断 ransomNote 能不能由 magazine 里面的字符构成。如果可以，返回 true ；否则返回 false 。</p>
-<p>15、给你一个整数数组 nums ，判断是否存在三元组 [nums[i], nums[j], nums[k]] 满足 i !&#x3D; j、i !&#x3D; k 且 j !&#x3D; k ，同时还满足 nums[i] + nums[j] + nums[k] &#x3D;&#x3D; 0 。请返回所有和为 0 且不重复的三元组。</p>
-<p>18、给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] </p>
+<ul>
+<li>时间复杂度：O(m+n)</li>
+<li>空间复杂度：O(n)</li>
+</ul>
+<blockquote>
+<p>leetcode459.重复的子字符串</p>
+<p>链接地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/repeated-substring-pattern/">https://leetcode.cn/problems/repeated-substring-pattern/</a></p>
 </blockquote>
-<h4 id><a href="#" class="headerlink" title></a></h4>
-    
-    <a class="article-more-a" href="/2023/07/24/Algorithm-day6/#more">more >></a>
-    
-    
+<ul>
+<li><p><strong>思路</strong></p>
+<p>最长相等前后缀不包含等字串为最小重复子串，如图所示:</p>
+<p><img src="/2023/08/01/Algorithm-day8/kmp.jpg"></p>
+</li>
+<li><p><strong>代码</strong>：</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getNext</span><span class="params">(<span class="type">int</span>[] next, String s)</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        next[<span class="number">0</span>] = j;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">while</span>(j &gt;= <span class="number">0</span> &amp;&amp; s.charAt(i) != s.charAt(j+<span class="number">1</span>))&#123;</span><br><span class="line">                j = next[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i) == s.charAt(j+<span class="number">1</span>)) j++;</span><br><span class="line">            next[i] = j;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">repeatedSubstringPattern</span><span class="params">(String s)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.equals(<span class="string">&quot;&quot;</span>)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="type">int</span> next[] = <span class="keyword">new</span> <span class="title class_">int</span>[len];</span><br><span class="line">        getNext(next, s);</span><br><span class="line">        <span class="keyword">if</span>(next[len - <span class="number">1</span>] != -<span class="number">1</span> &amp;&amp; len % (len - (next[len-<span class="number">1</span>]+<span class="number">1</span>)) == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度：O(n)</li>
+<li>空间复杂度：O(n)</li>
+</ul>
 
     
 
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Joy LEE
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2023/08/01/Algorithm-day8/" title="Algorithm-day8" target="_blank">http://example.com/2023/08/01/Algorithm-day8/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -491,16 +380,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/07/24/Algorithm-day6/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/08/01/Algorithm-day8/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/08/01/Algotithm-day7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Algotithm-day7</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -521,586 +470,14 @@
 
 
 
-  
-    <article id="post-Algorithm-day5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/07/23/Algorithm-day5/" target="_blank">Algorithm-day5</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2023/07/23/Algorithm-day5/" class="archive-article-date">
-        <time datetime="2023-07-23T06:50:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-23</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<h4 id="哈希表Part01：242-有效的字母异位词-349-两个数组的交集-202-快乐数-1-两数之和"><a href="#哈希表Part01：242-有效的字母异位词-349-两个数组的交集-202-快乐数-1-两数之和" class="headerlink" title="哈希表Part01：242.有效的字母异位词 349.两个数组的交集 202.快乐数 1.两数之和"></a>哈希表Part01：242.有效的字母异位词 349.两个数组的交集 202.快乐数 1.两数之和</h4><p>242、 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。若 s 和 t 中每个字符出现的次数都相同，则称 s 和 t 互为字母异位词。</p>
-<p>349、给定两个数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>它们的交集</em> 。输出结果中的每个元素一定是 <strong>唯一</strong> 的。我们可以 <strong>不考虑输出结果的顺序</strong> 。</p>
-<p>202、编写一个算法来判断一个数 n 是不是快乐数。</p>
-<p>对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。重复这个过程如果结果为 1，那么这个数就是快乐数。</p>
-<p>1、给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code>，请你在该数组中找出 <strong>和为目标值</strong> <em><code>target</code></em> 的那 <strong>两个</strong> 整数，并返回它们的数组下标。</p>
-</blockquote>
-<h4 id><a href="#" class="headerlink" title></a></h4>
-    
-    <a class="article-more-a" href="/2023/07/23/Algorithm-day5/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/07/23/Algorithm-day5/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Algorithm-day4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/07/23/Algorithm-day4/" target="_blank">Algorithm-day4</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/07/23/Algorithm-day4/" class="archive-article-date">
-        <time datetime="2023-07-22T18:24:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-23</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<h4 id="链表Part02：24-两两交换链表中的节点-19-删除链表的倒数第N个节点-160-链表相交-142-环形链表"><a href="#链表Part02：24-两两交换链表中的节点-19-删除链表的倒数第N个节点-160-链表相交-142-环形链表" class="headerlink" title="链表Part02：24.两两交换链表中的节点 19.删除链表的倒数第N个节点 160.链表相交 142.环形链表"></a>链表Part02：24.两两交换链表中的节点 19.删除链表的倒数第N个节点 160.链表相交 142.环形链表</h4><p>24、 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。</p>
-<p>19、给你一个链表，删除链表的倒数第 <code>n</code> 个结点，并且返回链表的头结点。</p>
-<p>160、给你两个单链表的头节点 <code>headA</code> 和 <code>headB</code> ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 <code>null</code></p>
-<p>142、给定一个链表的头节点  <code>head</code> ，返回链表开始入环的第一个节点。 <em>如果链表无环，则返回 <code>null</code>。</em></p>
-</blockquote>
-<h4 id><a href="#" class="headerlink" title></a></h4>
-    
-    <a class="article-more-a" href="/2023/07/23/Algorithm-day4/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/07/23/Algorithm-day4/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Algorithm-day3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/07/15/Algorithm-day3/" target="_blank">Algorithm-day3</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/07/15/Algorithm-day3/" class="archive-article-date">
-        <time datetime="2023-07-15T14:26:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-15</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<h4 id="链表Part01：203-移除链表元素-707-设计链表-206-反转链表"><a href="#链表Part01：203-移除链表元素-707-设计链表-206-反转链表" class="headerlink" title="链表Part01：203.移除链表元素  707.设计链表 206.反转链表"></a>链表Part01：203.移除链表元素  707.设计链表 206.反转链表</h4><p>203、 给你一个链表的头节点 <code>head</code> 和一个整数 <code>val</code> ，请你删除链表中所有满足 <code>Node.val == val</code> 的节点，并返回 <strong>新的头节点</strong> 。</p>
-<p>707、实现 <code>MyLinkedList</code> 类：</p>
-<p><code>int get(int index)</code></p>
-<p><code>void addAtHead(int val)</code></p>
-<p><code>void addAtTail(int val)</code></p>
-<p><code>void addAtIndex(int index, int val)</code></p>
-<p><code>void deleteAtIndex(int index)</code></p>
-<p>206、给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
-</blockquote>
-<h4 id><a href="#" class="headerlink" title></a></h4>
-    
-    <a class="article-more-a" href="/2023/07/15/Algorithm-day3/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/07/15/Algorithm-day3/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Algorithm-day2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/07/14/Algorithm-day2/" target="_blank">Algorithm day2</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/07/14/Algorithm-day2/" class="archive-article-date">
-        <time datetime="2023-07-14T09:12:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-14</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<h4 id="数组Part02：977-有序数组的平方-209-长度最小的子数组-59-螺旋矩阵"><a href="#数组Part02：977-有序数组的平方-209-长度最小的子数组-59-螺旋矩阵" class="headerlink" title="数组Part02：977.有序数组的平方  209.长度最小的子数组 59.螺旋矩阵"></a>数组Part02：977.有序数组的平方  209.长度最小的子数组 59.螺旋矩阵</h4><p>977、 给定一个按 <strong>非递减顺序</strong> 排序的整数数组 <code>nums</code>，返回 <strong>每个数字的平方</strong> 组成的新数组，要求也按 <strong>非递减顺序</strong> 排序。</p>
-<p>209、 给定一个含有 n 个正整数的数组和一个正整数 target 。找出该数组中满足其和 ≥ target 的长度最小的连续子数组 ，并返回其长度。如果不存在符合条件的子数组，返回 0 。</p>
-</blockquote>
-<h4 id><a href="#" class="headerlink" title></a></h4>
-    
-    <a class="article-more-a" href="/2023/07/14/Algorithm-day2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/07/14/Algorithm-day2/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Algorithm-day1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/07/10/Algorithm-day1/" target="_blank">Algorithm day1</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/07/10/Algorithm-day1/" class="archive-article-date">
-        <time datetime="2023-07-09T16:46:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<h4 id="数组Part01：704-二分查找-27-移除元素"><a href="#数组Part01：704-二分查找-27-移除元素" class="headerlink" title="数组Part01：704. 二分查找  27. 移除元素"></a>数组Part01：704. 二分查找  27. 移除元素</h4><p>704、 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1</p>
-<p>27、 给定一个数组 <code>nums</code> 和一个值 <code>val</code>， <strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。</p>
-</blockquote>
-<h4 id><a href="#" class="headerlink" title></a></h4>
-    
-    <a class="article-more-a" href="/2023/07/10/Algorithm-day1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法打卡</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/07/10/Algorithm-day1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/07/09/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/07/09/hello-world/" class="archive-article-date">
-        <time datetime="2023-07-09T03:01:00.446Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/07/09/hello-world/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -1140,8 +517,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
